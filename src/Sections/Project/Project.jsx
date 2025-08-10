@@ -11,6 +11,7 @@ export default function Projects() {
     {
       title: "Portfolio Website",
       img: project1,
+      aos:"fade-right",
       description:
        "Developed a functional e-commerce website featuring login authentication with local storage, enabling secure user access. Built using React.js, HTML, CSS, and JavaScript, the application includes product listings, a shopping cart, and a  optimal user experience.",
       link: "https://e-commerece-by-sathish.netlify.app/",
@@ -18,6 +19,7 @@ export default function Projects() {
     {
       title: "E-commerce Store",
       img: project2,
+      aos:"fade-left",
       description:
       "Created a simple food ordering website using HTML, CSS, and JavaScript, featuring an interactive menu and a responsive layout for a smooth user experience.",
       link: "https://simplefoodorderwebsite.netlify.app/",
@@ -30,7 +32,7 @@ export default function Projects() {
         <h2>Projects</h2>
         <div className="projects__grid">
           {projects.map((proj, index) => (
-            <div className="project-card" key={index}>
+            <div className="project-card" data-aos={proj.aos} key={index}>
               <img src={proj.img} alt={proj.title} />
               <div className="project-content">
                 <h3>{proj.title}</h3>

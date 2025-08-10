@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import "./Experience.scss";
 import { FaChalkboardTeacher } from "react-icons/fa";
 
@@ -7,7 +6,8 @@ const experiences = [
       {
     year: "Aug 2025 – Present",
     role: "Software Engineer",
-    company: "Novac Technology Solutions",
+    // company: "Novac Technology Solutions",:
+    company:<span>Novac Technology Solutions - <small>Software Engineer</small></span>,
    icon: <FaChalkboardTeacher />,
     description:
       "Transitioned to an insurance project, taking ownership of front-end development using React.js, ensuring seamless API integration and optimized performance. Collaborated closely with cross-functional teams to deliver high-quality features under tight deadlines. Contributed to backend modules using ASP.NET Web API and SQL Server, ensuring smooth data flow and system stability. Actively participated in requirement analysis, code reviews, and deployment activities to ensure timely and successful releases.",
@@ -15,7 +15,7 @@ const experiences = [
   {
     year: "May 2023 – May 2024",
     role: "Software Engineer Trainer",
-    company: "Novac Technology Solutions",
+  company:<span>Novac Technology Solutions - <small>Software Engineer Trainer</small></span>,
     icon: <FaChalkboardTeacher />,
     description:
      "Mentored and guided junior developers in full-stack development, sharing best practices and improving their coding skills. Successfully developed and integrated retail project modules using React TypeScript, ASP.NET Web API, and PostgreSQL with Entity Framework to deliver reliable and efficient solutions.",

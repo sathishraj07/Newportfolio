@@ -11,7 +11,7 @@ export default function Contact() {
     e.preventDefault();
 
     emailjs
-      .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form, "YOUR_USER_ID")
+      .send("service_1iycpqg", "template_f36m5id", form, "IPyUDunGgUkeuumQn")
       .then(() => {
         setStatus("Message sent successfully!");
         setForm({ name: "", email: "", message: "" });

@@ -1,12 +1,26 @@
-# React + Vite
+# 💼 My Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 **A modern and professional portfolio website** built with **React + Vite** and styled with **Sass**.  
+Designed to be **fully responsive**, showcasing my skills, projects, and professional journey as a React.js Developer.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
+- **Responsive Design** – Works perfectly on mobile, tablet, and desktop
+- **Smooth Animations** – Powered by Framer Motion
+- **Skills Section** – Animated skill cards with hover effects
+- **Projects Showcase** – Each project with description, tech stack & links
+- **Experience Timeline** – Clean vertical timeline design for career journey
+- **Social Links** – Quick access to LinkedIn, GitHub, and other platforms
+- **Fast Performance** – Built with Vite for blazing fast load times
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **Frontend:** React.js (Vite)
+- **Styling:** Sass (SCSS)
+- **Version Control:** Git & GitHub
+
+---
+
+## 📂 Folder Structure
