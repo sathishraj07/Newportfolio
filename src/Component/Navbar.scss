@@ -1,0 +1,56 @@
+@import "../Styles/Variables.scss";
+@import "../Styles/Mixins.scss";
+
+.navbar {
+  background: $secondary;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  .navbar__container {
+    @include flex-center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+   @include TextColor
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+
+    li a:hover {
+      @include TextColor
+    }
+
+    @include respond-mobile {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: $secondary;
+      flex-direction: column;
+      width: 200px;
+      padding: 1rem;
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    @include respond-mobile {
+      display: block;
+    }
+  }
+}

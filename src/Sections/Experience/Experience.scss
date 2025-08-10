@@ -1,0 +1,112 @@
+@import "../../Styles/Variables.scss";
+@import "../../Styles/Mixins.scss";
+
+.timeline {
+  padding: 3rem 1rem;
+ background: linear-gradient(120deg, $secondary, lighten($secondary, 8%));
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+      @include TextColor;
+  }
+
+  &__container {
+    position: relative;
+    margin: auto;
+    padding: 0 1rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 4px;
+      background: $primary;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+      @media (max-width: 768px) {
+        left: 20px;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 50%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding-left: 50px;
+      margin-bottom: 2rem;
+    }
+
+    &.left {
+      left: 0;
+      @media (max-width: 768px) {
+        left: 0;
+      }
+    }
+
+    &.right {
+      left: 50%;
+      @media (max-width: 768px) {
+        left: 0;
+      }
+    }
+  }
+
+  &__content {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+       color: gray;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      width: 20px;
+      height: 20px;
+      background: $primary;
+      border-radius: 50%;
+      z-index: 1;
+    }
+  }
+
+  .left .timeline__content::after {
+    right: -10px;
+    @media (max-width: 768px) {
+      left: -30px;
+    }
+  }
+
+  .right .timeline__content::after {
+    left: -10px;
+    @media (max-width: 768px) {
+      left: -30px;
+    }
+  }
+
+  &__year {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: gray;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+  p{
+    line-height: 1.6rem;
+  }
+}

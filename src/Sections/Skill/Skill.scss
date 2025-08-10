@@ -1,0 +1,66 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.skills {
+  h2 {
+    text-align: center;
+     @include TextColor;
+    margin-bottom: 2rem;
+  }
+
+  .skills__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s ease;
+
+    &.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .skill-card {
+    display: flex;
+   justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: $accent;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+    animation: fadeInUp 2s ease forwards;
+    opacity: 0;
+
+    .icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1rem;
+      color: $text;
+    }
+
+    &:hover {
+      background: lighten($accent, 5%);
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

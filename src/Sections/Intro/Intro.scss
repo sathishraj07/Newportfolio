@@ -1,0 +1,135 @@
+@import "../../Styles/Variables.scss";
+@import "../../styles/mixins";
+
+
+.hero {
+  background: linear-gradient(120deg, $secondary, lighten($secondary, 8%));
+  padding: 4rem 0;
+  overflow: hidden;
+
+  &__container {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    animation: fadeInUp 1s ease-in-out;
+  }
+
+  /* Left content with reflection effect */
+  &__text {
+    flex: 1;
+    position: relative;
+    animation: slideInLeft 1.2s ease-out;
+    overflow: hidden;
+    height: 200px;
+
+    /* Reflection Shine */
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.05) 60%,
+        transparent 100%
+      );
+      transform: skewX(-25deg);
+      animation: shine 4s infinite;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+     @include TextColor;
+      overflow: hidden;
+      white-space: nowrap;
+margin: 1rem 0;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite;
+    }
+
+    p {
+      margin: 2rem 0;
+      font-size: 1.2rem;
+      color: white;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .btn {
+      background: $primary;
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease-in-out;
+      animation: fadeIn 3s ease-in-out;
+      margin: 2rem;
+
+      &:hover {
+        background: lighten($primary, 10%);
+        transform: scale(1.05);
+        box-shadow: 0px 4px 20px rgba($primary, 0.4);
+      }
+    }
+  }
+
+  /* Right image (no reflection now) */
+&__image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  padding: 4px; // This is needed to create space for the gradient border
+  background: linear-gradient(90deg, #8b3df0, #ff2aa6); // gradient border
+  object-fit: cover;
+  animation: bounceIn 1.5s ease-in-out;
+  transition: transform 0.6s ease, box-shadow 0.3s ease;
+  // Inner image fill
+  background-clip: padding-box;
+  box-shadow: 0 0 10px rgba(255, 42, 166, 0.4);
+
+  // Optional hover effect
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 42, 166, 0.6);
+  }
+
+    &:hover {
+      transform: rotateY(360deg) scale(1.05);
+      box-shadow: 0px 10px 30px rgba($primary, 0.4);
+    }
+  }
+}
+
+/* Keyframes */
+@keyframes shine {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  50% { border-color: transparent }
+}
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+

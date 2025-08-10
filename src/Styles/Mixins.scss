@@ -1,0 +1,17 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin TextColor {
+  background: linear-gradient(90deg, #8b3df0 0%, #ff2aa6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* show gradient */
+}
+
+@mixin respond-mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}

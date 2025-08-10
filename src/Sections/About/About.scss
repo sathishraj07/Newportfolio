@@ -1,0 +1,21 @@
+@import "../../Styles/Variables.scss";
+@import "../../Styles/Mixins.scss";
+
+.about {
+  text-align: center;
+
+  h2 {
+      @include TextColor;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.9;
+    font-size: 1.2rem;
+  }
+  .Cv_btn{
+    margin: 1rem 0;
+  }
+}

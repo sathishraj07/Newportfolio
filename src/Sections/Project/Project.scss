@@ -1,0 +1,71 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.projects {
+  h2 {
+    text-align: center;
+   @include TextColor;
+    margin-bottom: 2rem;
+  }
+
+  .projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: $accent;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .project-content {
+      padding: 1rem;
+
+      h3 {
+       @include TextColor;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: lighten($text, 10%);
+        margin-bottom: 1rem;
+        line-height: 1.4;
+      }
+
+      a {
+        background: $primary;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        color: white;
+        font-size: 0.85rem;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: lighten($primary, 8%);
+        }
+      }
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      background: lighten($accent, 3%);
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+}

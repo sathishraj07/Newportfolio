@@ -1,0 +1,43 @@
+@import "../../styles/variables";
+@import "../../styles/Mixins";
+.links {
+  text-align: center;
+  padding: 3rem 1rem;
+
+  h2 {
+     @include TextColor;
+    margin-bottom: 2rem;
+  }
+
+  .links__container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .link-card {
+    background: $accent;
+    padding: 1.2rem 2rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: $text;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    .icon {
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      background: var(--hover-color);
+      color: #fff;
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+  }
+}
