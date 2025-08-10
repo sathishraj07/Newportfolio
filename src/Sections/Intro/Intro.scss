@@ -74,6 +74,15 @@ margin: 1rem 0;
       }
     }
   }
+  &__contact{
+    display: flex;
+    gap: 1rem;
+    margin: 1.2rem 0;
+    align-items: center;
+    .icon{
+      margin-right: .9rem ;
+    }
+  }
 
   /* Right image (no reflection now) */
 &__image {
