@@ -12,7 +12,30 @@
     @include flex-center;
     justify-content: space-between;
   }
-
+._Blink{
+  display: flex;
+  align-items: center ;
+}
+   .Blink_Effect {
+        display: inline-block; // or block
+  width: 12px;
+  height: 12px;
+  margin:  0 .8rem;
+ background: linear-gradient(90deg, #8b3df0 0%, #ff2aa6 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ff1f;
+  animation: bulb-blink 2.5s infinite ease-in-out;
+    }
+        @keyframes bulb-blink {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 20px rgba(0, 209, 255, 0.7);
+    }
+    50% {
+      opacity: 0.3;
+      box-shadow: 0 0 8px rgba(0, 209, 255, 0.2);
+    }
+  } 
   .logo {
     font-size: 1.5rem;
    @include TextColor

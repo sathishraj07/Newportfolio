@@ -9,7 +9,7 @@ export default function Projects() {
   }
   const projects = [
     {
-      title: "Portfolio Website",
+      title: "E-Commerce store",
       img: project1,
       aos:"fade-right",
       description:
@@ -17,7 +17,7 @@ export default function Projects() {
       link: "https://e-commerece-by-sathish.netlify.app/",
     },
     {
-      title: "E-commerce Store",
+      title: "Food Order",
       img: project2,
       aos:"fade-left",
       description:

@@ -7,7 +7,11 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="container navbar__container">
+        <div className="_Blink">
+  <label className='Blink_Effect'></label>
         <h1 className="logo">open to work </h1>
+        </div>
+       
         <ul className={menuOpen ? "nav-links active" : "nav-links"}>
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
