@@ -52,7 +52,7 @@ export default function Skills() {
                     }
                 });
             },
-            { threshold: 0.5 } // 20% visible
+            { threshold: 0.2 } // 20% visible
         );
 
         if (sectionRef.current) {

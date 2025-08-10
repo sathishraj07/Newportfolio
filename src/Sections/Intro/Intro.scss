@@ -76,7 +76,11 @@ margin: 1rem 0;
   }
 
   /* Right image (no reflection now) */
-&__image img {
+&__image {
+  @media (max-width: 768px) {
+      display: none;
+    }
+img {
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -100,6 +104,7 @@ margin: 1rem 0;
       box-shadow: 0px 10px 30px rgba($primary, 0.4);
     }
   }
+} 
 }
 
 /* Keyframes */
